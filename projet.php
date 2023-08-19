@@ -26,14 +26,14 @@ switch ($action) {
         echo 'J\'attaque !';
         break;
 
-        case 2: 
-            echo 'Je defends !';
-            break;
+    case 2: 
+        echo 'Je defends !';
+        break;
 
-            case 3: 
-                echo 'Je ne fais rien !';
-                break;
+    case 3: 
+        echo 'Je ne fais rien !';
+        break;
 
-                default:
-                echo 'Commande inconnue';
+    default:
+        echo 'Commande inconnue';
 }
