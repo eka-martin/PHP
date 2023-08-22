@@ -100,9 +100,12 @@ foreach ($notes as $note) {
     echo "- $note \n";
 } */
 
+
+
+
 //---------LES HORAIRES DE MAGASIN----------
 
-$creneaux = [];
+/* $creneaux = [];
 
 while(true) {
     $debut = (int)readline('Heure d\'ouverture:');
@@ -125,7 +128,7 @@ foreach ($creneaux as $k => $creneau) {
     }
 echo " {$creneau[0]}h à {$creneau[1]}h";
 }
-
+ */
 /* $heure = (int)readline("A quelle heure voulez vous visiter le magasin?");
 $creneauTrouve = false;
 
@@ -141,3 +144,6 @@ foreach($creneaux as $creneau) {
     } else {
     echo 'Le magasin sera fermé';
     } */
+
+ include 'functions.php';
+ var_dump(repondre_oui_non('Test'));   
