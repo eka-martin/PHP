@@ -61,7 +61,7 @@ echo 'Bravo vous avez gagné!'; */
 }
  */
 
- $notes = [8, 12, 16];
+ /* $notes = [8, 12, 16];
  $eleves = [
     'cm1' => ['Marc', 'Jean', 'Claude', 'Guillaume', 'Anne'],
     'cm2' => ['John', 'Cathrine', 'Isabelle', 'François']
@@ -82,4 +82,62 @@ foreach ($eleves as $classe => $listEleves) {
         echo " - $eleve \n";
     }
     echo " \n";
+} */
+
+//un list de notes
+/* $notes = [];
+
+while (true) {
+    $action = readline('Entrez une nouvelle note ou tapez \'fin\' pour terminer la saisie : ');
+    if ($action === 'fin') {
+        break;
+    } else {
+        $notes[] = (int)$action;
+    }
 }
+
+foreach ($notes as $note) {
+    echo "- $note \n";
+} */
+
+//---------LES HORAIRES DE MAGASIN----------
+
+$creneaux = [];
+
+while(true) {
+    $debut = (int)readline('Heure d\'ouverture:');
+    $fin = (int)readline('Heure de fermeture:');
+    if ($debut >= $fin) {
+    echo "le creneau ne peux pas etre enregistré car l\'heure de debut $debut est superior l\'heure de fin $fin";
+} else {
+    $creneaux[] = [$debut, $fin];
+    $action = readline('Entrez un nouveau creneau? (non):');
+    if ($action === 'non') {
+    break;
+    }
+}
+}
+
+echo "Le magasin est ouvert de";
+foreach ($creneaux as $k => $creneau) {
+    if ($k > 0) {
+        echo ' et de';
+    }
+echo " {$creneau[0]}h à {$creneau[1]}h";
+}
+
+/* $heure = (int)readline("A quelle heure voulez vous visiter le magasin?");
+$creneauTrouve = false;
+
+foreach($creneaux as $creneau) {
+    if ($heure >= $creneau[0] && $heure <= $creneau[1]) {
+        $creneauTrouve = true;
+        break;
+    }
+} */
+
+/* if ($creneauTrouve) {
+    echo 'Le magasin sera ouvert';
+    } else {
+    echo 'Le magasin sera fermé';
+    } */
