@@ -1,4 +1,7 @@
-<?php require 'header.php'; ?>
+<?php
+$title = 'Home'; 
+require 'header.php'; 
+?>
 
   <main>
     <h1 class="text-body-emphasis">Get started with Bootstrap</h1>
